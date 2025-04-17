@@ -1,8 +1,10 @@
+
 import { Search } from "lucide-react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
+
 const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
@@ -14,9 +16,13 @@ const Navbar = () => {
   };
   return <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
       <div className="container mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-2">
-        <Link to="/" className="text-2xl font-bold text-medical-600 flex items-center">
-          <img src="/lovable-uploads/096ae3e5-e428-493a-97e3-116e17f92dbb.png" alt="Obat Bebas Indonesia Logo" className="h-10 w-10 mr-2 object-fill" />
-          Informasi Obat Bebas Indonesia
+        <Link to="/" className="text-2xl font-bold text-medical-600 flex items-center space-x-3">
+          <img 
+            src="/lovable-uploads/096ae3e5-e428-493a-97e3-116e17f92dbb.png" 
+            alt="Informasi Obat Bebas Indonesia Logo" 
+            className="h-12 w-12 object-contain rounded-lg shadow-sm transition-transform hover:scale-105"
+          />
+          <span className="hidden sm:block">Informasi Obat Bebas Indonesia</span>
         </Link>
         
         <form onSubmit={handleSearch} className="w-full max-w-md flex">
