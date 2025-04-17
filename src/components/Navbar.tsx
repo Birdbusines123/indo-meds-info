@@ -1,41 +1,26 @@
-
 import { Search } from "lucide-react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-
 const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
     }
   };
-
-  return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
+  return <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
       <div className="container mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-2">
         <Link to="/" className="text-2xl font-bold text-medical-600 flex items-center">
-          <img 
-            src="/lovable-uploads/096ae3e5-e428-493a-97e3-116e17f92dbb.png" 
-            alt="Obat Bebas Indonesia Logo" 
-            className="h-10 w-10 mr-2"
-          />
+          <img src="/lovable-uploads/096ae3e5-e428-493a-97e3-116e17f92dbb.png" alt="Obat Bebas Indonesia Logo" className="h-10 w-10 mr-2 object-fill" />
           Informasi Obat Bebas Indonesia
         </Link>
         
         <form onSubmit={handleSearch} className="w-full max-w-md flex">
-          <Input
-            type="search"
-            placeholder="Cari obat..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="rounded-r-none border-r-0"
-          />
+          <Input type="search" placeholder="Cari obat..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)} className="rounded-r-none border-r-0" />
           <Button type="submit" className="rounded-l-none">
             <Search className="h-4 w-4 mr-2" />
             Cari
@@ -51,8 +36,6 @@ const Navbar = () => {
           </Link>
         </nav>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Navbar;
