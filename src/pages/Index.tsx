@@ -33,7 +33,7 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Kategori Gejala</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
               <SymptomCard
                 symptom="pusing"
                 title="Pusing"
@@ -50,6 +50,30 @@ const Index = () => {
                 symptom="alergi"
                 title="Alergi"
                 description="Obat-obatan untuk mengatasi gejala alergi seperti bersin, gatal, ruam kulit, dan reaksi alergi lainnya."
+              />
+
+              <SymptomCard
+                symptom="demam"
+                title="Demam"
+                description="Obat-obatan untuk menurunkan demam dan meredakan gejala yang menyertainya."
+              />
+
+              <SymptomCard
+                symptom="nyeri"
+                title="Nyeri"
+                description="Obat-obatan untuk meredakan nyeri ringan hingga sedang pada berbagai kondisi."
+              />
+
+              <SymptomCard
+                symptom="flu_pilek"
+                title="Flu & Pilek"
+                description="Obat-obatan untuk meredakan gejala flu dan pilek seperti hidung tersumbat, bersin, dan sakit tenggorokan."
+              />
+
+              <SymptomCard
+                symptom="pencernaan"
+                title="Pencernaan"
+                description="Obat-obatan untuk mengatasi gangguan pencernaan seperti maag, diare, dan sembelit."
               />
             </div>
           </div>

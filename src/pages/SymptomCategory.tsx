@@ -29,6 +29,36 @@ const categoryMap: Record<string, { title: string, categories: Array<{ id: strin
       { id: "cetirizine1", title: "Cetirizine 1" },
       { id: "cetirizine2", title: "Cetirizine 2" }
     ]
+  },
+  demam: {
+    title: "Obat Demam",
+    categories: [
+      { id: "ibuprofen", title: "Ibuprofen" },
+      { id: "aspirin", title: "Aspirin" }
+    ]
+  },
+  nyeri: {
+    title: "Obat Nyeri",
+    categories: [
+      { id: "asam_mefenamat", title: "Asam Mefenamat" },
+      { id: "dexketoprofen", title: "Dexketoprofen" }
+    ]
+  },
+  flu_pilek: {
+    title: "Obat Flu & Pilek",
+    categories: [
+      { id: "decongestant", title: "Decongestant" },
+      { id: "antihistamine", title: "Antihistamine" },
+      { id: "combinationflu", title: "Kombinasi" }
+    ]
+  },
+  pencernaan: {
+    title: "Obat Pencernaan",
+    categories: [
+      { id: "antacid", title: "Antacid" },
+      { id: "antidiarrheal", title: "Anti Diare" },
+      { id: "laxative", title: "Pencahar" }
+    ]
   }
 };
 

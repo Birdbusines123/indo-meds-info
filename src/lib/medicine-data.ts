@@ -1,4 +1,3 @@
-
 import { Medicine, MedicineCategory, SymptomCategory } from "./types";
 
 export const medicines: Medicine[] = [
@@ -206,6 +205,154 @@ export const medicines: Medicine[] = [
     sideEffects: "Mengantuk, mulut kering, kelelahan, pusing.",
     bpomId: "DKL1234567895A1",
   },
+  
+  // New medications for Demam (Fever)
+  {
+    id: 18,
+    name: "Proris Sirup",
+    category: "ibuprofen",
+    symptom: "demam",
+    description: "Proris sirup mengandung ibuprofen untuk menurunkan demam dan meredakan nyeri ringan hingga sedang pada anak-anak.",
+    dosage: "Anak-anak: Dosis berdasarkan berat badan, biasanya 5-10 mg/kg setiap 6-8 jam sesuai kebutuhan.",
+    activeIngredient: "Ibuprofen 100mg/5ml",
+    sideEffects: "Gangguan pencernaan, mual, sakit perut, reaksi alergi pada kasus tertentu.",
+    bpomId: "DTL2023456789A1",
+    manufacturer: "Pharos Indonesia",
+    bpomRegistrationDate: "2018-05-12",
+    indication: "Untuk menurunkan demam dan meredakan nyeri ringan hingga sedang pada anak.",
+    contraindication: "Hipersensitivitas terhadap ibuprofen, penderita tukak lambung, gangguan pembekuan darah.",
+    packaging: "Botol 60ml, 100ml",
+    storageCondition: "Simpan pada suhu di bawah 30°C, lindungi dari cahaya langsung."
+  },
+  {
+    id: 19,
+    name: "Aspirin 80mg",
+    category: "aspirin",
+    symptom: "demam",
+    description: "Aspirin dosis rendah digunakan untuk mencegah pembekuan darah dan menurunkan risiko serangan jantung atau stroke pada pasien berisiko tinggi.",
+    dosage: "Dewasa: 80-325mg sekali sehari atau sesuai petunjuk dokter.",
+    activeIngredient: "Asam asetilsalisilat 80mg",
+    sideEffects: "Iritasi lambung, mual, perdarahan, reaksi alergi, risiko sindrom Reye pada anak dan remaja.",
+    bpomId: "DKL2023456780A1",
+    manufacturer: "Bayer Indonesia",
+    bpomRegistrationDate: "2017-08-23",
+    indication: "Pencegahan trombosis pada penyakit kardiovaskular dan serebrovaskular.",
+    contraindication: "Anak dan remaja dengan gejala demam; pasien dengan riwayat tukak lambung, asma, atau gangguan pembekuan darah.",
+    packaging: "Blister 10 tablet, botol 30 tablet",
+    storageCondition: "Simpan pada suhu ruangan kering (15-30°C), jauhkan dari cahaya dan kelembaban."
+  },
+  
+  // Nyeri (Pain) medications
+  {
+    id: 20,
+    name: "Ponstan",
+    category: "asam_mefenamat",
+    symptom: "nyeri",
+    description: "Ponstan mengandung asam mefenamat untuk meredakan nyeri ringan hingga sedang, termasuk nyeri haid dan sakit gigi.",
+    dosage: "Dewasa: 500mg 3 kali sehari sesuai kebutuhan, tidak dianjurkan untuk penggunaan lebih dari 7 hari berturut-turut.",
+    activeIngredient: "Asam mefenamat 500mg",
+    sideEffects: "Gangguan pencernaan, mual, diare, sakit kepala, pusing, ruam kulit.",
+    bpomId: "DKL2023456781A1",
+    manufacturer: "Pfizer Indonesia",
+    bpomRegistrationDate: "2019-03-15",
+    contraindication: "Hipersensitivitas terhadap asam mefenamat, tukak lambung aktif, gangguan fungsi ginjal berat.",
+    packaging: "Strip 10 kaplet"
+  },
+  {
+    id: 21,
+    name: "Ketesse",
+    category: "dexketoprofen",
+    symptom: "nyeri",
+    description: "Ketesse mengandung dexketoprofen untuk meredakan nyeri akut ringan hingga sedang, seperti nyeri otot, nyeri sendi, dan nyeri pasca operasi.",
+    dosage: "Dewasa: 25mg setiap 8 jam, maksimal 75mg per hari.",
+    activeIngredient: "Dexketoprofen trometamol 25mg",
+    sideEffects: "Gangguan pencernaan, mual, muntah, diare, sakit kepala, pusing.",
+    bpomId: "DKL2023456782A1",
+    manufacturer: "Menarini Indonesia",
+    bpomRegistrationDate: "2020-01-30"
+  },
+  
+  // Flu & Pilek (Flu & Cold) medications
+  {
+    id: 22,
+    name: "Decolsin",
+    category: "combinationflu",
+    symptom: "flu_pilek",
+    description: "Decolsin adalah kombinasi dari beberapa bahan aktif untuk meredakan gejala flu seperti demam, sakit kepala, hidung tersumbat, dan bersin.",
+    dosage: "Dewasa: 1 tablet setiap 8 jam.",
+    activeIngredient: "Parasetamol 500mg, Fenilefrin HCl 10mg, Klorfeniramin maleat 2mg",
+    sideEffects: "Mengantuk, mulut kering, pusing, jantung berdebar.",
+    bpomId: "DKL2023456783A1",
+    manufacturer: "Darya-Varia Laboratoria",
+    bpomRegistrationDate: "2018-11-12"
+  },
+  {
+    id: 23,
+    name: "Deconex",
+    category: "decongestant",
+    symptom: "flu_pilek",
+    description: "Deconex mengandung pseudoefedrin sebagai dekongestan untuk melegakan hidung tersumbat akibat pilek atau sinusitis.",
+    dosage: "Dewasa: 1 tablet setiap 12 jam.",
+    activeIngredient: "Pseudoefedrin HCl 120mg",
+    sideEffects: "Insomnia, gelisah, mulut kering, peningkatan tekanan darah, jantung berdebar.",
+    bpomId: "DKL2023456784A1",
+    manufacturer: "Kalbe Farma",
+    bpomRegistrationDate: "2019-06-24"
+  },
+  {
+    id: 24,
+    name: "Alermin",
+    category: "antihistamine",
+    symptom: "flu_pilek",
+    description: "Alermin mengandung klorfeniramin maleat untuk meredakan gejala alergi pada saluran pernapasan seperti bersin dan hidung berair.",
+    dosage: "Dewasa: 1 tablet setiap 8 jam.",
+    activeIngredient: "Klorfeniramin maleat 4mg",
+    sideEffects: "Mengantuk, pusing, mulut kering, gangguan penglihatan.",
+    bpomId: "DKL2023456785A1",
+    manufacturer: "Kimia Farma",
+    bpomRegistrationDate: "2017-05-30"
+  },
+  
+  // Pencernaan (Digestive) medications
+  {
+    id: 25,
+    name: "Promag",
+    category: "antacid",
+    symptom: "pencernaan",
+    description: "Promag adalah antasida yang meredakan gejala maag seperti nyeri ulu hati, kembung, dan mual.",
+    dosage: "Dewasa: 1-2 tablet dikunyah, 3-4 kali sehari, sebaiknya 1 jam setelah makan dan menjelang tidur.",
+    activeIngredient: "Hidrotalcit 200mg, Simetikon 80mg",
+    sideEffects: "Umumnya aman, dapat menyebabkan sembelit atau diare ringan pada beberapa orang.",
+    bpomId: "DKL2023456786A1",
+    manufacturer: "Kalbe Farma",
+    bpomRegistrationDate: "2016-02-18"
+  },
+  {
+    id: 26,
+    name: "Diapet",
+    category: "antidiarrheal",
+    symptom: "pencernaan",
+    description: "Diapet adalah obat herbal untuk mengatasi diare, dengan kandungan herbal yang membantu mengurangi frekuensi BAB dan memperbaiki konsistensi feses.",
+    dosage: "Dewasa: 2 tablet, 3 kali sehari. Anak-anak >6 tahun: 1 tablet, 3 kali sehari.",
+    activeIngredient: "Ekstrak Psidii folium, Curcumae domesticae rhizoma, Coptidis rhizoma, Granati pericarpium",
+    sideEffects: "Jarang terjadi, dapat berupa reaksi alergi pada individu sensitif.",
+    bpomId: "TR2023456787A1",
+    manufacturer: "Soho Industri Pharmasi",
+    bpomRegistrationDate: "2018-09-05"
+  },
+  {
+    id: 27,
+    name: "Dulcolax",
+    category: "laxative",
+    symptom: "pencernaan",
+    description: "Dulcolax adalah obat pencahar yang digunakan untuk mengatasi sembelit sementara dan membantu memperlancar buang air besar.",
+    dosage: "Dewasa: 1-2 tablet diminum sebelum tidur, bekerja dalam waktu 6-12 jam. Anak >10 tahun: 1 tablet sebelum tidur.",
+    activeIngredient: "Bisacodyl 5mg",
+    sideEffects: "Kram perut, diare, mual.",
+    bpomId: "DKL2023456788A1",
+    manufacturer: "Boehringer Ingelheim Indonesia",
+    bpomRegistrationDate: "2017-11-22"
+  }
 ];
 
 export const getSymptomMedicines = (symptom: SymptomCategory): Medicine[] => {

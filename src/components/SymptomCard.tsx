@@ -18,6 +18,14 @@ const SymptomCard = ({ symptom, title, description }: SymptomCardProps) => {
         return 'bg-emerald-600';
       case 'alergi':
         return 'bg-blue-600';
+      case 'demam':
+        return 'bg-red-600';
+      case 'nyeri':
+        return 'bg-purple-600';
+      case 'flu_pilek':
+        return 'bg-cyan-600';
+      case 'pencernaan':
+        return 'bg-green-600';
       default:
         return 'bg-medical-600';
     }

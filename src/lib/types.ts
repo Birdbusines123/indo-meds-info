@@ -1,7 +1,23 @@
 
-export type MedicineCategory = 'paracetamol' | 'panadol' | 'bodrex' | 'obh' | 'obh1' | 'obh2' | 'cetirizine' | 'cetirizine1' | 'cetirizine2';
+export type MedicineCategory = 
+  // Pusing (Headache) categories
+  | 'paracetamol' | 'panadol' | 'bodrex' 
+  // Batuk (Cough) categories
+  | 'obh' | 'obh1' | 'obh2'
+  // Alergi (Allergy) categories
+  | 'cetirizine' | 'cetirizine1' | 'cetirizine2'
+  // Demam (Fever) categories
+  | 'ibuprofen' | 'aspirin'
+  // Nyeri (Pain) categories
+  | 'asam_mefenamat' | 'dexketoprofen'
+  // Flu & Pilek (Flu & Cold) categories
+  | 'decongestant' | 'antihistamine' | 'combinationflu'
+  // Pencernaan (Digestive) categories
+  | 'antacid' | 'antidiarrheal' | 'laxative';
 
-export type SymptomCategory = 'pusing' | 'batuk' | 'alergi';
+export type SymptomCategory = 
+  | 'pusing' | 'batuk' | 'alergi' 
+  | 'demam' | 'nyeri' | 'flu_pilek' | 'pencernaan';
 
 export interface Medicine {
   id: number;
@@ -22,4 +38,3 @@ export interface Medicine {
   storageCondition?: string;
   image?: string;
 }
-
