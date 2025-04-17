@@ -4,6 +4,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getMedicineById } from "@/lib/medicine-data";
 import { ArrowLeft } from "lucide-react";
+import { 
+  Table,
+  TableBody,
+  TableCell,
+  TableRow
+} from "@/components/ui/table";
 
 const MedicineDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -28,49 +34,100 @@ const MedicineDetail = () => {
               <div className="bg-medical-600 p-6 text-white">
                 <h1 className="text-3xl font-bold">{medicine.name}</h1>
                 <p className="text-sm mt-2">BPOM ID: {medicine.bpomId}</p>
+                {medicine.manufacturer && (
+                  <p className="text-sm mt-1">Produsen: {medicine.manufacturer}</p>
+                )}
               </div>
               
               <div className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="md:col-span-2">
-                    <h2 className="text-xl font-semibold mb-3">Deskripsi</h2>
-                    <p className="text-gray-700 mb-6">{medicine.description}</p>
+                  <div className="md:col-span-2 space-y-6">
+                    <div>
+                      <h2 className="text-xl font-semibold mb-3">Deskripsi</h2>
+                      <p className="text-gray-700">{medicine.description}</p>
+                    </div>
                     
-                    <h2 className="text-xl font-semibold mb-3">Dosis</h2>
-                    <p className="text-gray-700 mb-6">{medicine.dosage}</p>
+                    <div>
+                      <h2 className="text-xl font-semibold mb-3">Indikasi</h2>
+                      <p className="text-gray-700">{medicine.indication || medicine.description}</p>
+                    </div>
                     
-                    <h2 className="text-xl font-semibold mb-3">Efek Samping</h2>
-                    <p className="text-gray-700">{medicine.sideEffects}</p>
+                    <div>
+                      <h2 className="text-xl font-semibold mb-3">Dosis</h2>
+                      <p className="text-gray-700">{medicine.dosage}</p>
+                    </div>
+                    
+                    {medicine.contraindication && (
+                      <div>
+                        <h2 className="text-xl font-semibold mb-3">Kontraindikasi</h2>
+                        <p className="text-gray-700">{medicine.contraindication}</p>
+                      </div>
+                    )}
+                    
+                    <div>
+                      <h2 className="text-xl font-semibold mb-3">Efek Samping</h2>
+                      <p className="text-gray-700">{medicine.sideEffects}</p>
+                    </div>
                   </div>
                   
                   <div className="bg-gray-50 p-4 rounded-lg">
                     <h2 className="text-xl font-semibold mb-3">Informasi Obat</h2>
                     
-                    <div className="space-y-4">
-                      <div>
-                        <h3 className="text-sm font-semibold text-gray-500">Bahan Aktif</h3>
-                        <p className="text-gray-700">{medicine.activeIngredient}</p>
-                      </div>
-                      
-                      <div>
-                        <h3 className="text-sm font-semibold text-gray-500">Kategori</h3>
-                        <p className="text-gray-700 capitalize">{medicine.category}</p>
-                      </div>
-                      
-                      <div>
-                        <h3 className="text-sm font-semibold text-gray-500">Gejala</h3>
-                        <p className="text-gray-700 capitalize">{medicine.symptom}</p>
-                      </div>
-                      
-                      <div>
-                        <h3 className="text-sm font-semibold text-gray-500">ID BPOM</h3>
-                        <p className="text-gray-700">{medicine.bpomId}</p>
-                      </div>
-                    </div>
+                    <Table>
+                      <TableBody>
+                        <TableRow>
+                          <TableCell className="font-medium">Bahan Aktif</TableCell>
+                          <TableCell>{medicine.activeIngredient}</TableCell>
+                        </TableRow>
+                        
+                        {medicine.composition && (
+                          <TableRow>
+                            <TableCell className="font-medium">Komposisi</TableCell>
+                            <TableCell>{medicine.composition}</TableCell>
+                          </TableRow>
+                        )}
+                        
+                        <TableRow>
+                          <TableCell className="font-medium">Kategori</TableCell>
+                          <TableCell className="capitalize">{medicine.category}</TableCell>
+                        </TableRow>
+                        
+                        <TableRow>
+                          <TableCell className="font-medium">Gejala</TableCell>
+                          <TableCell className="capitalize">{medicine.symptom}</TableCell>
+                        </TableRow>
+                        
+                        <TableRow>
+                          <TableCell className="font-medium">ID BPOM</TableCell>
+                          <TableCell>{medicine.bpomId}</TableCell>
+                        </TableRow>
+                        
+                        {medicine.bpomRegistrationDate && (
+                          <TableRow>
+                            <TableCell className="font-medium">Tanggal Registrasi</TableCell>
+                            <TableCell>{medicine.bpomRegistrationDate}</TableCell>
+                          </TableRow>
+                        )}
+                        
+                        {medicine.packaging && (
+                          <TableRow>
+                            <TableCell className="font-medium">Kemasan</TableCell>
+                            <TableCell>{medicine.packaging}</TableCell>
+                          </TableRow>
+                        )}
+                        
+                        {medicine.storageCondition && (
+                          <TableRow>
+                            <TableCell className="font-medium">Penyimpanan</TableCell>
+                            <TableCell>{medicine.storageCondition}</TableCell>
+                          </TableRow>
+                        )}
+                      </TableBody>
+                    </Table>
                     
                     <div className="mt-6 pt-6 border-t border-gray-200">
                       <p className="text-sm text-gray-500">
-                        Data obat ini diperoleh dari database BPOM. Selalu konsultasikan dengan tenaga kesehatan profesional sebelum menggunakan obat apapun.
+                        Data obat ini diperoleh dari database BPOM Indonesia. Selalu konsultasikan dengan tenaga kesehatan profesional sebelum menggunakan obat apapun.
                       </p>
                     </div>
                   </div>

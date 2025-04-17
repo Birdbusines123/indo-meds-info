@@ -13,5 +13,13 @@ export interface Medicine {
   activeIngredient: string;
   sideEffects: string;
   bpomId: string;
+  bpomRegistrationDate?: string;
+  manufacturer?: string;
+  composition?: string;
+  indication?: string;
+  contraindication?: string;
+  packaging?: string;
+  storageCondition?: string;
   image?: string;
 }
+
