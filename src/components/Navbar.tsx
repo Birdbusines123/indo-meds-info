@@ -20,8 +20,12 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
       <div className="container mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-2">
         <Link to="/" className="text-2xl font-bold text-medical-600 flex items-center">
-          <span className="inline-block mr-2">💊</span>
-          Indo Meds Info
+          <img 
+            src="/lovable-uploads/096ae3e5-e428-493a-97e3-116e17f92dbb.png" 
+            alt="Obat Bebas Indonesia Logo" 
+            className="h-10 w-10 mr-2"
+          />
+          Informasi Obat Bebas Indonesia
         </Link>
         
         <form onSubmit={handleSearch} className="w-full max-w-md flex">
