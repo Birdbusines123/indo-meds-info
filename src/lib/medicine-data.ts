@@ -1,7 +1,124 @@
 import { Medicine, MedicineCategory, SymptomCategory } from "./types";
 
 export const medicines: Medicine[] = [
-  // Pusing - Paracetamol
+  // Pusing (Headache) medications
+  {
+    id: 1,
+    name: "Paracetamol 500mg",
+    category: "paracetamol",
+    symptom: "pusing",
+    description: "Paracetamol 500mg adalah obat pereda nyeri dan penurun demam yang umum digunakan untuk mengatasi sakit kepala, nyeri ringan hingga sedang, dan demam.",
+    dosage: "Dewasa: 1-2 tablet setiap 4-6 jam sesuai kebutuhan, maksimal 8 tablet dalam 24 jam.",
+    activeIngredient: "Paracetamol 500mg",
+    sideEffects: "Jarang terjadi, dapat meliputi ruam kulit, reaksi alergi, gangguan fungsi hati pada penggunaan dosis tinggi.",
+    bpomId: "DBL7809291427A1",
+    manufacturer: "Kimia Farma",
+    composition: "Paracetamol 500mg",
+    indication: "Meredakan nyeri ringan hingga sedang seperti sakit kepala, sakit gigi, nyeri otot, dan menurunkan demam",
+    contraindication: "Hipersensitivitas terhadap paracetamol, gangguan fungsi hati berat",
+    packaging: "Strip 10 tablet",
+    storageCondition: "Simpan di bawah suhu 30°C"
+  },
+  {
+    id: 2,
+    name: "Panadol Extra",
+    category: "panadol",
+    symptom: "pusing",
+    description: "Kombinasi paracetamol dan kafein untuk mengatasi sakit kepala, nyeri, dan demam dengan efek yang lebih cepat.",
+    dosage: "Dewasa: 1-2 tablet setiap 4-6 jam sesuai kebutuhan.",
+    activeIngredient: "Paracetamol 500mg, Kafein 65mg",
+    sideEffects: "Mengantuk, pusing, mual pada beberapa individu",
+    bpomId: "DBL9876543210A1",
+    manufacturer: "Sterling",
+    bpomRegistrationDate: "2020-03-15"
+  },
+
+  // Batuk (Cough) medications
+  {
+    id: 3,
+    name: "OBH Combi Plus",
+    category: "obh",
+    symptom: "batuk",
+    description: "Obat batuk kombinasi dengan formula yang efektif untuk meredakan batuk berdahak dan gejala flu.",
+    dosage: "Dewasa: 3x sehari 15ml, Anak 6-12 tahun: 3x sehari 10ml",
+    activeIngredient: "Succus Liquiritiae, Ammonium Chloride, Chlorpheniramine maleate",
+    sideEffects: "Mengantuk, mulut kering",
+    bpomId: "BTL2023111501",
+    manufacturer: "OBH Combi Indonesia"
+  },
+
+  // Alergi (Allergy) medications
+  {
+    id: 4,
+    name: "Cetirizine Kimia Farma",
+    category: "cetirizine",
+    symptom: "alergi",
+    description: "Antihistamin generasi kedua untuk mengatasi gejala alergi seperti bersin dan gatal-gatal.",
+    dosage: "Dewasa dan anak >12 tahun: 1x sehari 10mg",
+    activeIngredient: "Cetirizine HCl 10mg",
+    sideEffects: "Mengantuk ringan, mulut kering",
+    bpomId: "DTL2023111502",
+    manufacturer: "Kimia Farma"
+  },
+
+  // Demam (Fever) medications
+  {
+    id: 5,
+    name: "Ibuprofen 400mg",
+    category: "ibuprofen",
+    symptom: "demam",
+    description: "NSAID untuk menurunkan demam dan meredakan nyeri ringan hingga sedang.",
+    dosage: "Dewasa: 400mg setiap 4-6 jam sesuai kebutuhan",
+    activeIngredient: "Ibuprofen 400mg",
+    sideEffects: "Mual, sakit perut, heartburn",
+    bpomId: "DTL2023111503",
+    manufacturer: "Indofarma"
+  },
+
+  // Nyeri (Pain) medications
+  {
+    id: 6,
+    name: "Asam Mefenamat 500mg",
+    category: "asam_mefenamat",
+    symptom: "nyeri",
+    description: "Obat anti nyeri yang efektif untuk nyeri ringan hingga sedang, termasuk nyeri haid.",
+    dosage: "Dewasa: 500mg 3x sehari",
+    activeIngredient: "Asam Mefenamat 500mg",
+    sideEffects: "Mual, diare, sakit kepala",
+    bpomId: "DTL2023111504",
+    manufacturer: "Dexa Medica"
+  },
+
+  // Flu & Pilek (Flu & Cold) medications
+  {
+    id: 7,
+    name: "Decolgen",
+    category: "combinationflu",
+    symptom: "flu_pilek",
+    description: "Kombinasi untuk meredakan gejala flu seperti demam, hidung tersumbat, dan bersin.",
+    dosage: "Dewasa: 1 tablet 3x sehari",
+    activeIngredient: "Paracetamol 500mg, Phenylephrine HCl 10mg, Chlorpheniramine maleate 2mg",
+    sideEffects: "Mengantuk, mulut kering",
+    bpomId: "DTL2023111505",
+    manufacturer: "Darya-Varia"
+  },
+
+  // Pencernaan (Digestive) medications
+  {
+    id: 8,
+    name: "Promag Tablet",
+    category: "antacid",
+    symptom: "pencernaan",
+    description: "Antasida untuk meredakan nyeri lambung, kembung, dan mual.",
+    dosage: "Dewasa: 1-2 tablet dikunyah 3x sehari",
+    activeIngredient: "Hydrotalcite 200mg, Mg(OH)2 150mg, Simethicone 50mg",
+    sideEffects: "Konstipasi ringan",
+    bpomId: "DTL2023111506",
+    manufacturer: "Kalbe Farma",
+    bpomRegistrationDate: "2021-06-15",
+    storageCondition: "Simpan di tempat sejuk dan kering"
+  },
+    // Pusing - Paracetamol
   {
     id: 1,
     name: "Paracetamol 500mg",
