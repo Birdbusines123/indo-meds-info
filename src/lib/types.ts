@@ -1,7 +1,8 @@
 
+
 export type MedicineCategory = 
   // Pusing (Headache) categories
-  | 'paracetamol' | 'panadol' | 'bodrex' 
+  | 'paracetamol' | 'panadol' | 'bodrex' | 'herbal'
   // Batuk (Cough) categories
   | 'obh' | 'obh1' | 'obh2'
   // Alergi (Allergy) categories

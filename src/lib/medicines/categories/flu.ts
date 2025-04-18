@@ -1,3 +1,4 @@
+
 import { Medicine } from "../../types";
 
 export const fluMedicines: Medicine[] = [
@@ -52,7 +53,7 @@ export const fluMedicines: Medicine[] = [
     manufacturer: "Kimia Farma",
     bpomRegistrationDate: "2017-05-30"
   },
-    {
+  {
     id: 15,
     name: "Coldact",
     category: "combinationflu",
