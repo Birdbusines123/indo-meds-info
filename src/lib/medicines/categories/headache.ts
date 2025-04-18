@@ -1,0 +1,93 @@
+import { Medicine } from "../../types";
+
+export const headacheMedicines: Medicine[] = [
+  {
+    id: 1,
+    name: "Paracetamol 500mg",
+    category: "paracetamol",
+    symptom: "pusing",
+    description: "Paracetamol 500mg adalah obat pereda nyeri dan penurun demam yang umum digunakan untuk mengatasi sakit kepala, nyeri ringan hingga sedang, dan demam.",
+    dosage: "Dewasa: 1-2 tablet setiap 4-6 jam sesuai kebutuhan, maksimal 8 tablet dalam 24 jam. Anak-anak: Sesuaikan dengan berat badan, konsultasikan dengan dokter.",
+    activeIngredient: "Paracetamol 500mg",
+    sideEffects: "Umumnya aman jika digunakan sesuai dosis. Efek samping jarang terjadi namun dapat mencakup ruam kulit, reaksi alergi, gangguan fungsi hati pada penggunaan dosis tinggi atau jangka panjang.",
+    bpomId: "DBL7809291427A1",
+  },
+  {
+    id: 2,
+    name: "Paracetamol Sirup 120mg/5ml",
+    category: "paracetamol",
+    symptom: "pusing",
+    description: "Paracetamol sirup adalah bentuk cair dari paracetamol yang lebih mudah diberikan pada anak-anak untuk mengatasi demam dan nyeri ringan hingga sedang.",
+    dosage: "Dosis berdasarkan usia dan berat badan anak. Umumnya untuk anak 2-6 tahun: 5-10ml setiap 4-6 jam. Konsultasikan dengan dokter untuk dosis yang tepat.",
+    activeIngredient: "Paracetamol 120mg per 5ml",
+    sideEffects: "Jarang terjadi, namun dapat meliputi reaksi alergi, gangguan fungsi hati jika overdosis.",
+    bpomId: "DBL7321569824A1",
+  },
+  
+  // Pusing - Panadol
+  {
+    id: 3,
+    name: "Panadol Extra",
+    category: "panadol",
+    symptom: "pusing",
+    description: "Panadol Extra menggabungkan paracetamol dan kafein untuk mengatasi nyeri sedang hingga berat seperti sakit kepala, sakit gigi, nyeri otot, dan nyeri sendi.",
+    dosage: "Dewasa dan anak >12 tahun: 1-2 tablet setiap 4-6 jam sesuai kebutuhan, maksimal 8 tablet dalam 24 jam.",
+    activeIngredient: "Paracetamol 500mg, Kafein 65mg",
+    sideEffects: "Gelisah, sulit tidur pada individu sensitif terhadap kafein, reaksi alergi (jarang), gangguan fungsi hati jika melebihi dosis.",
+    bpomId: "DKL9876543210A1",
+  },
+  {
+    id: 4,
+    name: "Panadol Biru",
+    category: "panadol",
+    symptom: "pusing",
+    description: "Panadol Biru adalah paracetamol yang dikemas dengan lapisan biru untuk membedakannya. Digunakan untuk meredakan sakit kepala, nyeri ringan hingga sedang, dan demam.",
+    dosage: "Dewasa: 1-2 tablet setiap 4-6 jam sesuai kebutuhan, maksimal 8 tablet dalam 24 jam.",
+    activeIngredient: "Paracetamol 500mg",
+    sideEffects: "Umumnya aman jika digunakan sesuai dosis. Efek samping jarang terjadi.",
+    bpomId: "DKL9876543211A1",
+  },
+  
+  // Pusing - Bodrex
+  {
+    id: 5,
+    name: "Bodrex",
+    category: "bodrex",
+    symptom: "pusing",
+    description: "Bodrex adalah kombinasi paracetamol dan kafein yang digunakan untuk meredakan sakit kepala dan nyeri lainnya. Kafein meningkatkan efektivitas paracetamol.",
+    dosage: "Dewasa: 1 tablet, 3-4 kali sehari. Jangan melebihi 4 tablet per hari.",
+    activeIngredient: "Paracetamol 600mg, Kafein 50mg",
+    sideEffects: "Gangguan tidur, gelisah pada individu sensitif terhadap kafein, reaksi alergi (jarang), gangguan fungsi hati jika overdosis.",
+    bpomId: "DBL0123456789A1",
+  },
+    // Additional Pusing (Headache) medications
+  {
+    id: 9,
+    name: "Bodrex Migra",
+    category: "bodrex",
+    symptom: "pusing",
+    description: "Bodrex Migra adalah kombinasi paracetamol dan kafein yang dikhususkan untuk mengatasi sakit kepala migrain.",
+    dosage: "Dewasa: 1 tablet, 2-3 kali sehari sesuai kebutuhan.",
+    activeIngredient: "Paracetamol 650mg, Kafein 50mg",
+    sideEffects: "Gelisah, sulit tidur, jantung berdebar pada individu sensitif kafein",
+    bpomId: "DBL2024111001",
+    manufacturer: "Tempo Scan Pacific",
+    composition: "Paracetamol 650mg, Kafein 50mg",
+    indication: "Meredakan sakit kepala migrain dan nyeri kepala sebelah",
+    packaging: "Strip 4 tablet"
+  },
+  {
+    id: 10,
+    name: "Tolak Angin",
+    category: "herbal",
+    symptom: "pusing",
+    description: "Tolak Angin adalah obat herbal untuk meredakan gejala masuk angin termasuk pusing dan mual.",
+    dosage: "Dewasa: 1 sachet, 3 kali sehari",
+    activeIngredient: "Ekstrak Amomi Fructus, Zingiberis Aromaticae, Menthae Arvensis",
+    sideEffects: "Umumnya aman, bisa menyebabkan mengantuk ringan",
+    bpomId: "TR2024111002",
+    manufacturer: "Sido Muncul",
+    composition: "Ekstrak herbal terstandarisasi",
+    packaging: "Box 5 sachet"
+  },
+];
