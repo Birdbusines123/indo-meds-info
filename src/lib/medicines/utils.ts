@@ -1,3 +1,4 @@
+
 import { Medicine, MedicineCategory, SymptomCategory } from "../types";
 import { headacheMedicines } from "./categories/headache";
 import { coughMedicines } from "./categories/cough";
