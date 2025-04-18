@@ -469,27 +469,97 @@ export const medicines: Medicine[] = [
     bpomId: "DKL2023456788A1",
     manufacturer: "Boehringer Ingelheim Indonesia",
     bpomRegistrationDate: "2017-11-22"
-  }
-];
+  },
+  // Additional Pusing (Headache) medications
+  {
+    id: 9,
+    name: "Bodrex Migra",
+    category: "bodrex",
+    symptom: "pusing",
+    description: "Bodrex Migra adalah kombinasi paracetamol dan kafein yang dikhususkan untuk mengatasi sakit kepala migrain.",
+    dosage: "Dewasa: 1 tablet, 2-3 kali sehari sesuai kebutuhan.",
+    activeIngredient: "Paracetamol 650mg, Kafein 50mg",
+    sideEffects: "Gelisah, sulit tidur, jantung berdebar pada individu sensitif kafein",
+    bpomId: "DBL2024111001",
+    manufacturer: "Tempo Scan Pacific",
+    composition: "Paracetamol 650mg, Kafein 50mg",
+    indication: "Meredakan sakit kepala migrain dan nyeri kepala sebelah",
+    packaging: "Strip 4 tablet"
+  },
+  {
+    id: 10,
+    name: "Tolak Angin",
+    category: "herbal",
+    symptom: "pusing",
+    description: "Tolak Angin adalah obat herbal untuk meredakan gejala masuk angin termasuk pusing dan mual.",
+    dosage: "Dewasa: 1 sachet, 3 kali sehari",
+    activeIngredient: "Ekstrak Amomi Fructus, Zingiberis Aromaticae, Menthae Arvensis",
+    sideEffects: "Umumnya aman, bisa menyebabkan mengantuk ringan",
+    bpomId: "TR2024111002",
+    manufacturer: "Sido Muncul",
+    composition: "Ekstrak herbal terstandarisasi",
+    packaging: "Box 5 sachet"
+  },
 
-export const getSymptomMedicines = (symptom: SymptomCategory): Medicine[] => {
-  return medicines.filter(med => med.symptom === symptom);
-};
+  // Additional Batuk (Cough) medications
+  {
+    id: 11,
+    name: "Woods Herbal",
+    category: "obh",
+    symptom: "batuk",
+    description: "Woods Herbal adalah sirup batuk dengan formula herbal untuk meredakan batuk dan melegakan tenggorokan.",
+    dosage: "Dewasa: 15ml, 3 kali sehari. Anak >6 tahun: 10ml, 3 kali sehari",
+    activeIngredient: "Ekstrak Glycyrrhiza glabra, Peppermint oil",
+    sideEffects: "Jarang terjadi, bisa menyebabkan mual ringan",
+    bpomId: "TR2024111003",
+    manufacturer: "Woods Pharmaceutical",
+    storageCondition: "Simpan di tempat sejuk dan kering di bawah 30°C"
+  },
+  {
+    id: 12,
+    name: "Vicks Formula 44",
+    category: "obh2",
+    symptom: "batuk",
+    description: "Vicks Formula 44 adalah obat batuk yang efektif untuk meredakan batuk kering dan mengurangi iritasi tenggorokan.",
+    dosage: "Dewasa dan anak >12 tahun: 15ml setiap 6-8 jam",
+    activeIngredient: "Dextromethorphan HBr 15mg/5ml",
+    sideEffects: "Mengantuk, pusing, mulut kering",
+    bpomId: "DTL2024111004",
+    manufacturer: "Procter & Gamble",
+    packaging: "Botol 100ml"
+  },
 
-export const getCategoryMedicines = (category: MedicineCategory): Medicine[] => {
-  return medicines.filter(med => med.category === category);
-};
+  // Additional Alergi (Allergy) medications
+  {
+    id: 13,
+    name: "Loratadine 10mg",
+    category: "antihistamine",
+    symptom: "alergi",
+    description: "Loratadine adalah antihistamin non-sedatif untuk mengatasi gejala alergi seperti bersin dan hidung berair.",
+    dosage: "Dewasa dan anak >12 tahun: 1 tablet sekali sehari",
+    activeIngredient: "Loratadine 10mg",
+    sideEffects: "Sakit kepala ringan, mulut kering",
+    bpomId: "DTL2024111005",
+    manufacturer: "Dexa Medica",
+    indication: "Mengatasi gejala alergi seperti rhinitis alergi dan urtikaria"
+  },
 
-export const getMedicineById = (id: number): Medicine | undefined => {
-  return medicines.find(med => med.id === id);
-};
+  // Additional Demam (Fever) medications
+  {
+    id: 14,
+    name: "Sanmol Forte",
+    category: "paracetamol",
+    symptom: "demam",
+    description: "Sanmol Forte adalah paracetamol dosis tinggi untuk menurunkan demam dan meredakan nyeri sedang hingga berat.",
+    dosage: "Dewasa: 1 tablet setiap 6 jam sesuai kebutuhan",
+    activeIngredient: "Paracetamol 650mg",
+    sideEffects: "Jarang terjadi, reaksi alergi pada kasus tertentu",
+    bpomId: "DTL2024111006",
+    manufacturer: "Sanbe Farma",
+    packaging: "Strip 10 tablet"
+  },
 
-export const searchMedicines = (query: string): Medicine[] => {
-  const searchTerm = query.toLowerCase();
-  return medicines.filter(med => 
-    med.name.toLowerCase().includes(searchTerm) ||
-    med.description.toLowerCase().includes(searchTerm) ||
-    med.activeIngredient.toLowerCase().includes(searchTerm) ||
-    med.bpomId.toLowerCase().includes(searchTerm)
-  );
-};
+  // Additional Flu & Pilek medications
+  {
+    id: 15,
+    name: "
