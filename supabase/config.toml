@@ -1,1 +1,5 @@
+
 project_id = "harttqsomtrfyzsgboxc"
+
+[functions.scrape-bpom]
+verify_jwt = true

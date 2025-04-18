@@ -9,7 +9,69 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      medications: {
+        Row: {
+          active_ingredient: string | null
+          category: string
+          contraindication: string | null
+          created_at: string | null
+          description: string | null
+          dosage: string | null
+          expiry_date: string | null
+          id: string
+          indication: string | null
+          manufacturer: string | null
+          name: string
+          packaging: string | null
+          registration_date: string | null
+          registration_number: string
+          side_effects: string | null
+          storage_condition: string | null
+          symptom: string
+          updated_at: string | null
+        }
+        Insert: {
+          active_ingredient?: string | null
+          category: string
+          contraindication?: string | null
+          created_at?: string | null
+          description?: string | null
+          dosage?: string | null
+          expiry_date?: string | null
+          id?: string
+          indication?: string | null
+          manufacturer?: string | null
+          name: string
+          packaging?: string | null
+          registration_date?: string | null
+          registration_number: string
+          side_effects?: string | null
+          storage_condition?: string | null
+          symptom: string
+          updated_at?: string | null
+        }
+        Update: {
+          active_ingredient?: string | null
+          category?: string
+          contraindication?: string | null
+          created_at?: string | null
+          description?: string | null
+          dosage?: string | null
+          expiry_date?: string | null
+          id?: string
+          indication?: string | null
+          manufacturer?: string | null
+          name?: string
+          packaging?: string | null
+          registration_date?: string | null
+          registration_number?: string
+          side_effects?: string | null
+          storage_condition?: string | null
+          symptom?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

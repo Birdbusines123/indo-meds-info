@@ -1,41 +1,61 @@
 
-import { Medicine, MedicineCategory, SymptomCategory } from "../types";
-import { headacheMedicines } from "./categories/headache";
-import { coughMedicines } from "./categories/cough";
-import { allergyMedicines } from "./categories/allergy";
-import { feverMedicines } from "./categories/fever";
-import { digestiveMedicines } from "./categories/digestive";
-import { fluMedicines } from "./categories/flu";
+import { supabase } from "@/integrations/supabase/client";
+import type { Medicine, MedicineCategory, SymptomCategory } from "../types";
 
-const allMedicines: Medicine[] = [
-  ...headacheMedicines,
-  ...coughMedicines,
-  ...allergyMedicines,
-  ...feverMedicines,
-  ...digestiveMedicines,
-  ...fluMedicines,
-];
-
-export const getSymptomMedicines = (symptom: SymptomCategory): Medicine[] => {
-  return allMedicines.filter(med => med.symptom === symptom);
+export const getSymptomMedicines = async (symptom: SymptomCategory): Promise<Medicine[]> => {
+  const { data, error } = await supabase
+    .from('medications')
+    .select('*')
+    .eq('symptom', symptom);
+    
+  if (error) {
+    console.error('Error fetching medicines:', error);
+    return [];
+  }
+  
+  return data || [];
 };
 
-export const getCategoryMedicines = (category: MedicineCategory): Medicine[] => {
-  return allMedicines.filter(med => med.category === category);
+export const getCategoryMedicines = async (category: MedicineCategory): Promise<Medicine[]> => {
+  const { data, error } = await supabase
+    .from('medications')
+    .select('*')
+    .eq('category', category);
+    
+  if (error) {
+    console.error('Error fetching medicines:', error);
+    return [];
+  }
+  
+  return data || [];
 };
 
-export const getMedicineById = (id: number): Medicine | undefined => {
-  return allMedicines.find(med => med.id === id);
+export const getMedicineById = async (id: string): Promise<Medicine | null> => {
+  const { data, error } = await supabase
+    .from('medications')
+    .select('*')
+    .eq('id', id)
+    .single();
+    
+  if (error) {
+    console.error('Error fetching medicine:', error);
+    return null;
+  }
+  
+  return data;
 };
 
-export const searchMedicines = (query: string): Medicine[] => {
-  const searchTerm = query.toLowerCase();
-  return allMedicines.filter(med => 
-    med.name.toLowerCase().includes(searchTerm) ||
-    med.description.toLowerCase().includes(searchTerm) ||
-    med.activeIngredient.toLowerCase().includes(searchTerm) ||
-    med.bpomId.toLowerCase().includes(searchTerm)
-  );
+export const searchMedicines = async (query: string): Promise<Medicine[]> => {
+  const { data, error } = await supabase
+    .from('medications')
+    .select('*')
+    .or(`name.ilike.%${query}%, description.ilike.%${query}%, active_ingredient.ilike.%${query}%`)
+    .limit(50);
+    
+  if (error) {
+    console.error('Error searching medicines:', error);
+    return [];
+  }
+  
+  return data || [];
 };
-
-export { allMedicines as medicines };
