@@ -75,6 +75,24 @@ const Index = () => {
                 title="Pencernaan"
                 description="Obat-obatan untuk mengatasi gangguan pencernaan seperti maag, diare, dan sembelit."
               />
+              
+              <SymptomCard
+                symptom="kulit"
+                title="Kulit"
+                description="Obat-obatan untuk mengatasi masalah kulit seperti luka, gatal, dan luka bakar."
+              />
+              
+              <SymptomCard
+                symptom="mata"
+                title="Mata"
+                description="Obat-obatan untuk mengatasi masalah mata seperti iritasi, mata kering, dan infeksi."
+              />
+              
+              <SymptomCard
+                symptom="vitamin_suplemen"
+                title="Vitamin & Suplemen"
+                description="Berbagai vitamin dan suplemen untuk menjaga kesehatan dan meningkatkan daya tahan tubuh."
+              />
             </div>
           </div>
         </section>

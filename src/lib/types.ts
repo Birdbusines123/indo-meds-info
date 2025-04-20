@@ -1,4 +1,3 @@
-
 export type MedicineCategory = 
   // Pusing (Headache) categories
   | 'paracetamol' | 'panadol' | 'bodrex' | 'herbal'
@@ -13,11 +12,18 @@ export type MedicineCategory =
   // Flu & Pilek (Flu & Cold) categories
   | 'decongestant' | 'antihistamine' | 'combinationflu'
   // Pencernaan (Digestive) categories
-  | 'antacid' | 'antidiarrheal' | 'laxative';
+  | 'antacid' | 'antidiarrheal' | 'laxative'
+  // Kulit (Skin) categories
+  | 'antiseptic' | 'antiitch' | 'burn_treatment'
+  // Mata (Eye) categories
+  | 'eye_drops' | 'eye_lubricant' | 'eye_antibiotic'
+  // Vitamin & Suplemen categories
+  | 'multivitamin' | 'vitamin_c' | 'mineral' | 'herbal_supplement';
 
 export type SymptomCategory = 
   | 'pusing' | 'batuk' | 'alergi' 
-  | 'demam' | 'nyeri' | 'flu_pilek' | 'pencernaan';
+  | 'demam' | 'nyeri' | 'flu_pilek' | 'pencernaan'
+  | 'kulit' | 'mata' | 'vitamin_suplemen';
 
 export interface Medicine {
   id: string;

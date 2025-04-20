@@ -59,6 +59,31 @@ const categoryMap: Record<string, { title: string, categories: Array<{ id: strin
       { id: "antidiarrheal", title: "Anti Diare" },
       { id: "laxative", title: "Pencahar" }
     ]
+  },
+  kulit: {
+    title: "Obat Kulit",
+    categories: [
+      { id: "antiseptic", title: "Antiseptik" },
+      { id: "antiitch", title: "Anti Gatal" },
+      { id: "burn_treatment", title: "Perawatan Luka Bakar" }
+    ]
+  },
+  mata: {
+    title: "Obat Mata",
+    categories: [
+      { id: "eye_drops", title: "Tetes Mata" },
+      { id: "eye_lubricant", title: "Pelumas Mata" },
+      { id: "eye_antibiotic", title: "Antibiotik Mata" }
+    ]
+  },
+  vitamin_suplemen: {
+    title: "Vitamin & Suplemen",
+    categories: [
+      { id: "multivitamin", title: "Multivitamin" },
+      { id: "vitamin_c", title: "Vitamin C" },
+      { id: "mineral", title: "Mineral" },
+      { id: "herbal_supplement", title: "Suplemen Herbal" }
+    ]
   }
 };
 
