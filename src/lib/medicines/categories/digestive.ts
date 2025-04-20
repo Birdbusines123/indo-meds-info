@@ -1,11 +1,12 @@
-import { Medicine } from "../../types";
+
+import { Medicine, MedicineCategory, SymptomCategory } from "../../types";
 
 export const digestiveMedicines: Medicine[] = [
   {
     id: "8",
     name: "Promag Tablet",
-    category: "antacid",
-    symptom: "pencernaan",
+    category: "antacid" as MedicineCategory,
+    symptom: "pencernaan" as SymptomCategory,
     description: "Antasida untuk meredakan nyeri lambung, kembung, dan mual.",
     dosage: "Dewasa: 1-2 tablet dikunyah 3x sehari",
     active_ingredient: "Hydrotalcite 200mg, Mg(OH)2 150mg, Simethicone 50mg",
@@ -19,11 +20,11 @@ export const digestiveMedicines: Medicine[] = [
     bpomId: "DTL2023111506",
     bpomRegistrationDate: "2021-06-15"
   },
-    {
+  {
     id: "25",
     name: "Promag",
-    category: "antacid",
-    symptom: "pencernaan",
+    category: "antacid" as MedicineCategory,
+    symptom: "pencernaan" as SymptomCategory,
     description: "Promag adalah antasida yang meredakan gejala maag seperti nyeri ulu hati, kembung, dan mual.",
     dosage: "Dewasa: 1-2 tablet dikunyah, 3-4 kali sehari, sebaiknya 1 jam setelah makan dan menjelang tidur.",
     active_ingredient: "Hidrotalcit 200mg, Simetikon 80mg",
@@ -39,8 +40,8 @@ export const digestiveMedicines: Medicine[] = [
   {
     id: "26",
     name: "Diapet",
-    category: "antidiarrheal",
-    symptom: "pencernaan",
+    category: "antidiarrheal" as MedicineCategory,
+    symptom: "pencernaan" as SymptomCategory,
     description: "Diapet adalah obat herbal untuk mengatasi diare, dengan kandungan herbal yang membantu mengurangi frekuensi BAB dan memperbaiki konsistensi feses.",
     dosage: "Dewasa: 2 tablet, 3 kali sehari. Anak-anak >6 tahun: 1 tablet, 3 kali sehari.",
     active_ingredient: "Ekstrak Psidii folium, Curcumae domesticae rhizoma, Coptidis rhizoma, Granati pericarpium",
@@ -56,8 +57,8 @@ export const digestiveMedicines: Medicine[] = [
   {
     id: "27",
     name: "Dulcolax",
-    category: "laxative",
-    symptom: "pencernaan",
+    category: "laxative" as MedicineCategory,
+    symptom: "pencernaan" as SymptomCategory,
     description: "Dulcolax adalah obat pencahar yang digunakan untuk mengatasi sembelit sementara dan membantu memperlancar buang air besar.",
     dosage: "Dewasa: 1-2 tablet diminum sebelum tidur, bekerja dalam waktu 6-12 jam. Anak >10 tahun: 1 tablet sebelum tidur.",
     active_ingredient: "Bisacodyl 5mg",
@@ -69,5 +70,5 @@ export const digestiveMedicines: Medicine[] = [
     sideEffects: "Kram perut, diare, mual.",
     bpomId: "DKL2023456788A1",
     bpomRegistrationDate: "2017-11-22"
-  },
+  }
 ];

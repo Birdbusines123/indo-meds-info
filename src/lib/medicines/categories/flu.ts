@@ -1,11 +1,11 @@
-import { Medicine } from "../../types";
+import { Medicine, MedicineCategory, SymptomCategory } from "../../types";
 
 export const fluMedicines: Medicine[] = [
   {
     id: "7",
     name: "Decolgen",
-    category: "combinationflu",
-    symptom: "flu_pilek",
+    category: "combinationflu" as MedicineCategory,
+    symptom: "flu_pilek" as SymptomCategory,
     description: "Kombinasi untuk meredakan gejala flu seperti demam, hidung tersumbat, dan bersin.",
     dosage: "Dewasa: 1 tablet 3x sehari",
     active_ingredient: "Paracetamol 500mg, Phenylephrine HCl 10mg, Chlorpheniramine maleate 2mg",
@@ -19,8 +19,8 @@ export const fluMedicines: Medicine[] = [
   {
     id: "22",
     name: "Decolsin",
-    category: "combinationflu",
-    symptom: "flu_pilek",
+    category: "combinationflu" as MedicineCategory,
+    symptom: "flu_pilek" as SymptomCategory,
     description: "Decolsin adalah kombinasi dari beberapa bahan aktif untuk meredakan gejala flu seperti demam, sakit kepala, hidung tersumbat, dan bersin.",
     dosage: "Dewasa: 1 tablet setiap 8 jam.",
     active_ingredient: "Parasetamol 500mg, Fenilefrin HCl 10mg, Klorfeniramin maleat 2mg",
@@ -36,8 +36,8 @@ export const fluMedicines: Medicine[] = [
   {
     id: "23",
     name: "Deconex",
-    category: "decongestant",
-    symptom: "flu_pilek",
+    category: "decongestant" as MedicineCategory,
+    symptom: "flu_pilek" as SymptomCategory,
     description: "Deconex mengandung pseudoefedrin sebagai dekongestan untuk melegakan hidung tersumbat akibat pilek atau sinusitis.",
     dosage: "Dewasa: 1 tablet setiap 12 jam.",
     active_ingredient: "Pseudoefedrin HCl 120mg",
@@ -53,8 +53,8 @@ export const fluMedicines: Medicine[] = [
   {
     id: "24",
     name: "Alermin",
-    category: "antihistamine",
-    symptom: "flu_pilek",
+    category: "antihistamine" as MedicineCategory,
+    symptom: "flu_pilek" as SymptomCategory,
     description: "Alermin mengandung klorfeniramin maleat untuk meredakan gejala alergi pada saluran pernapasan seperti bersin dan hidung berair.",
     dosage: "Dewasa: 1 tablet setiap 8 jam.",
     active_ingredient: "Klorfeniramin maleat 4mg",
@@ -70,8 +70,8 @@ export const fluMedicines: Medicine[] = [
   {
     id: "15",
     name: "Coldact",
-    category: "combinationflu",
-    symptom: "flu_pilek",
+    category: "combinationflu" as MedicineCategory,
+    symptom: "flu_pilek" as SymptomCategory,
     description: "Coldact adalah obat kombinasi untuk meredakan gejala flu seperti demam, sakit kepala, hidung tersumbat, dan bersin-bersin.",
     dosage: "Dewasa: 1 kapsul setiap 8 jam.",
     active_ingredient: "Paracetamol, Phenylpropanolamine HCl, Chlorpheniramine maleate",
@@ -82,5 +82,5 @@ export const fluMedicines: Medicine[] = [
     activeIngredient: "Paracetamol, Phenylpropanolamine HCl, Chlorpheniramine maleate",
     sideEffects: "Mengantuk, pusing, mulut kering",
     bpomId: "DTL2024111007"
-  },
+  }
 ];

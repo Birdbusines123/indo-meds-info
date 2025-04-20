@@ -1,11 +1,12 @@
-import { Medicine } from "../../types";
+
+import { Medicine, MedicineCategory, SymptomCategory } from "../../types";
 
 export const feverMedicines: Medicine[] = [
   {
     id: "5",
     name: "Ibuprofen 400mg",
-    category: "ibuprofen",
-    symptom: "demam",
+    category: "ibuprofen" as MedicineCategory,
+    symptom: "demam" as SymptomCategory,
     description: "NSAID untuk menurunkan demam dan meredakan nyeri ringan hingga sedang.",
     dosage: "Dewasa: 400mg setiap 4-6 jam sesuai kebutuhan",
     active_ingredient: "Ibuprofen 400mg",
@@ -20,8 +21,8 @@ export const feverMedicines: Medicine[] = [
   {
     id: "18",
     name: "Proris Sirup",
-    category: "ibuprofen",
-    symptom: "demam",
+    category: "ibuprofen" as MedicineCategory,
+    symptom: "demam" as SymptomCategory,
     description: "Proris sirup mengandung ibuprofen untuk menurunkan demam dan meredakan nyeri ringan hingga sedang pada anak-anak.",
     dosage: "Anak-anak: Dosis berdasarkan berat badan, biasanya 5-10 mg/kg setiap 6-8 jam sesuai kebutuhan.",
     active_ingredient: "Ibuprofen 100mg/5ml",
@@ -41,8 +42,8 @@ export const feverMedicines: Medicine[] = [
   {
     id: "19",
     name: "Aspirin 80mg",
-    category: "aspirin",
-    symptom: "demam",
+    category: "aspirin" as MedicineCategory,
+    symptom: "demam" as SymptomCategory,
     description: "Aspirin dosis rendah digunakan untuk mencegah pembekuan darah dan menurunkan risiko serangan jantung atau stroke pada pasien berisiko tinggi.",
     dosage: "Dewasa: 80-325mg sekali sehari atau sesuai petunjuk dokter.",
     active_ingredient: "Asam asetilsalisilat 80mg",
@@ -59,12 +60,12 @@ export const feverMedicines: Medicine[] = [
     bpomId: "DKL2023456780A1",
     bpomRegistrationDate: "2017-08-23"
   },
-    // Additional Demam (Fever) medications
+  // Additional Demam (Fever) medications
   {
     id: "14",
     name: "Sanmol Forte",
-    category: "paracetamol",
-    symptom: "demam",
+    category: "paracetamol" as MedicineCategory,
+    symptom: "demam" as SymptomCategory,
     description: "Sanmol Forte adalah paracetamol dosis tinggi untuk menurunkan demam dan meredakan nyeri sedang hingga berat.",
     dosage: "Dewasa: 1 tablet setiap 6 jam sesuai kebutuhan",
     active_ingredient: "Paracetamol 650mg",
@@ -75,5 +76,5 @@ export const feverMedicines: Medicine[] = [
     activeIngredient: "Paracetamol 650mg",
     sideEffects: "Jarang terjadi, reaksi alergi pada kasus tertentu",
     bpomId: "DTL2024111006"
-  },
+  }
 ];

@@ -1,11 +1,11 @@
-import { Medicine } from "../../types";
+import { Medicine, MedicineCategory, SymptomCategory } from "../../types";
 
 export const coughMedicines: Medicine[] = [
   {
     id: "3",
     name: "OBH Combi Plus",
-    category: "obh",
-    symptom: "batuk",
+    category: "obh" as MedicineCategory,
+    symptom: "batuk" as SymptomCategory,
     description: "Obat batuk kombinasi dengan formula yang efektif untuk meredakan batuk berdahak dan gejala flu.",
     dosage: "Dewasa: 3x sehari 15ml, Anak 6-12 tahun: 3x sehari 10ml",
     active_ingredient: "Succus Liquiritiae, Ammonium Chloride, Chlorpheniramine maleate",
@@ -19,8 +19,8 @@ export const coughMedicines: Medicine[] = [
   {
     id: "6",
     name: "OBH Combi",
-    category: "obh",
-    symptom: "batuk",
+    category: "obh" as MedicineCategory,
+    symptom: "batuk" as SymptomCategory,
     description: "OBH Combi adalah obat batuk kombinasi dari ekstrak tanaman dengan efek ekspektoran untuk melegakan batuk berdahak dan meredakan gejala flu.",
     dosage: "Dewasa: 3 sendok takar (15ml), 3 kali sehari. Anak 6-12 tahun: 2 sendok takar (10ml), 3 kali sehari.",
     active_ingredient: "Succus liquiritiae, Ammonium klorida, Efedrin HCl, Klorfeniramin maleat",
@@ -33,8 +33,8 @@ export const coughMedicines: Medicine[] = [
   {
     id: "7",
     name: "OBH Combi Anak",
-    category: "obh",
-    symptom: "batuk",
+    category: "obh" as MedicineCategory,
+    symptom: "batuk" as SymptomCategory,
     description: "OBH Combi Anak diformulasikan khusus untuk anak-anak, dengan rasa yang lebih disukai dan dosis yang disesuaikan untuk mengatasi batuk berdahak pada anak.",
     dosage: "Anak 6-12 tahun: 2 sendok takar (10ml), 3 kali sehari. Anak 2-6 tahun: 1 sendok takar (5ml), 3 kali sehari.",
     active_ingredient: "Succus liquiritiae, Ammonium klorida, Efedrin HCl, Klorfeniramin maleat (kadar lebih rendah dari versi dewasa)",
@@ -47,8 +47,8 @@ export const coughMedicines: Medicine[] = [
   {
     id: "8",
     name: "OBH Itrasal",
-    category: "obh1",
-    symptom: "batuk",
+    category: "obh1" as MedicineCategory,
+    symptom: "batuk" as SymptomCategory,
     description: "OBH Itrasal adalah obat batuk untuk mengatasi batuk berdahak, meredakan gejala bronkitis akut dan kronis, serta infeksi saluran pernapasan lainnya.",
     dosage: "Dewasa: 15 ml, 3 kali sehari. Anak 6-12 tahun: 10 ml, 3 kali sehari.",
     active_ingredient: "Succus liquiritiae, Ammonium klorida, Glycyrrhiza, Chlorpheniramine maleate",
@@ -61,8 +61,8 @@ export const coughMedicines: Medicine[] = [
   {
     id: "9",
     name: "OBH Tropica",
-    category: "obh1",
-    symptom: "batuk",
+    category: "obh1" as MedicineCategory,
+    symptom: "batuk" as SymptomCategory,
     description: "OBH Tropica adalah obat batuk herbal dengan formula tradisional yang dimodernisasi untuk mengatasi batuk berdahak.",
     dosage: "Dewasa: 15 ml, 3 kali sehari. Anak >6 tahun: 10 ml, 3 kali sehari.",
     active_ingredient: "Ekstrak akar manis, Ammonium klorida, Mentol",
@@ -75,8 +75,8 @@ export const coughMedicines: Medicine[] = [
   {
     id: "10",
     name: "Siladex Batuk & Flu",
-    category: "obh2",
-    symptom: "batuk",
+    category: "obh2" as MedicineCategory,
+    symptom: "batuk" as SymptomCategory,
     description: "Siladex Batuk & Flu adalah obat kombinasi untuk meredakan gejala batuk disertai flu seperti hidung tersumbat, bersin, dan demam.",
     dosage: "Dewasa: 15 ml, 3 kali sehari. Anak 6-12 tahun: 7.5 ml, 3 kali sehari.",
     active_ingredient: "Paracetamol, Dextromethorphan HBr, Chlorpheniramine maleate, Phenylephrine HCl",
@@ -89,8 +89,8 @@ export const coughMedicines: Medicine[] = [
   {
     id: "11",
     name: "Konidin",
-    category: "obh2",
-    symptom: "batuk",
+    category: "obh2" as MedicineCategory,
+    symptom: "batuk" as SymptomCategory,
     description: "Konidin adalah obat batuk yang mengandung dextromethorphan untuk meredakan batuk tidak berdahak akibat iritasi tenggorokan.",
     dosage: "Dewasa: 1 tablet, 3-4 kali sehari. Anak 6-12 tahun: 1/2 tablet, 3 kali sehari.",
     active_ingredient: "Dextromethorphan HBr 15mg",
@@ -103,8 +103,8 @@ export const coughMedicines: Medicine[] = [
   {
     id: "11",
     name: "Woods Herbal",
-    category: "obh",
-    symptom: "batuk",
+    category: "obh" as MedicineCategory,
+    symptom: "batuk" as SymptomCategory,
     description: "Woods Herbal adalah sirup batuk dengan formula herbal untuk meredakan batuk dan melegakan tenggorokan.",
     dosage: "Dewasa: 15ml, 3 kali sehari. Anak >6 tahun: 10ml, 3 kali sehari",
     active_ingredient: "Ekstrak Glycyrrhiza glabra, Peppermint oil",
@@ -119,8 +119,8 @@ export const coughMedicines: Medicine[] = [
   {
     id: "12",
     name: "Vicks Formula 44",
-    category: "obh2",
-    symptom: "batuk",
+    category: "obh2" as MedicineCategory,
+    symptom: "batuk" as SymptomCategory,
     description: "Vicks Formula 44 adalah obat batuk yang efektif untuk meredakan batuk kering dan mengurangi iritasi tenggorokan.",
     dosage: "Dewasa dan anak >12 tahun: 15ml setiap 6-8 jam",
     active_ingredient: "Dextromethorphan HBr 15mg/5ml",
@@ -131,5 +131,5 @@ export const coughMedicines: Medicine[] = [
     activeIngredient: "Dextromethorphan HBr 15mg/5ml",
     sideEffects: "Mengantuk, pusing, mulut kering",
     bpomId: "DTL2024111004"
-  },
+  }
 ];
