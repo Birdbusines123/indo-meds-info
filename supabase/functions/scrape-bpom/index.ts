@@ -1,5 +1,6 @@
 
-import { serve } from "https://deno.fresh.dev/";
+// Import from the correct Deno standard library URL
+import { serve } from "https://deno.land/std@0.208.0/http/server.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.3';
 
 const corsHeaders = {

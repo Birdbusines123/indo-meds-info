@@ -6,7 +6,7 @@ import type { Medicine, MedicineCategory, SymptomCategory } from "../types";
 const mapDbToMedicine = (item: any): Medicine => {
   return {
     ...item,
-    // Map the database fields to the interface fields for backward compatibility
+    // Ensure backward compatibility
     activeIngredient: item.active_ingredient,
     sideEffects: item.side_effects,
     bpomId: item.registration_number,
