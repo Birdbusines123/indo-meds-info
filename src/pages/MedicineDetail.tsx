@@ -1,8 +1,9 @@
 
 import { useParams, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { getMedicineById } from "@/lib/medicine-data";
+import { getMedicineById } from "@/lib/medicines/utils";
 import { ArrowLeft } from "lucide-react";
 import { 
   Table,
@@ -10,10 +11,30 @@ import {
   TableCell,
   TableRow
 } from "@/components/ui/table";
+import type { Medicine } from "@/lib/types";
 
 const MedicineDetail = () => {
   const { id } = useParams<{ id: string }>();
-  const medicine = id ? getMedicineById(parseInt(id)) : undefined;
+  const [medicine, setMedicine] = useState<Medicine | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  
+  useEffect(() => {
+    const fetchMedicine = async () => {
+      if (id) {
+        try {
+          setLoading(true);
+          const data = await getMedicineById(id);
+          setMedicine(data);
+        } catch (error) {
+          console.error("Error fetching medicine:", error);
+        } finally {
+          setLoading(false);
+        }
+      }
+    };
+    
+    fetchMedicine();
+  }, [id]);
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -21,19 +42,25 @@ const MedicineDetail = () => {
       
       <main className="flex-grow py-12">
         <div className="container mx-auto px-4">
-          <Link 
-            to={`/kategori/${medicine?.symptom}/${medicine?.category}`} 
-            className="inline-flex items-center text-medical-600 hover:text-medical-700 mb-6"
-          >
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Kembali ke daftar obat
-          </Link>
+          {medicine && (
+            <Link 
+              to={`/kategori/${medicine.symptom}/${medicine.category}`} 
+              className="inline-flex items-center text-medical-600 hover:text-medical-700 mb-6"
+            >
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Kembali ke daftar obat
+            </Link>
+          )}
           
-          {medicine ? (
+          {loading ? (
+            <div className="text-center py-12">
+              <p className="text-gray-600">Memuat data...</p>
+            </div>
+          ) : medicine ? (
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="bg-medical-600 p-6 text-white">
                 <h1 className="text-3xl font-bold">{medicine.name}</h1>
-                <p className="text-sm mt-2">BPOM ID: {medicine.bpomId}</p>
+                <p className="text-sm mt-2">BPOM ID: {medicine.registration_number || medicine.bpomId}</p>
                 {medicine.manufacturer && (
                   <p className="text-sm mt-1">Produsen: {medicine.manufacturer}</p>
                 )}
@@ -57,7 +84,7 @@ const MedicineDetail = () => {
                       <p className="text-gray-700">{medicine.dosage}</p>
                     </div>
                     
-                    {medicine.contraindication && (
+                    {(medicine.contraindication || medicine.contraindication) && (
                       <div>
                         <h2 className="text-xl font-semibold mb-3">Kontraindikasi</h2>
                         <p className="text-gray-700">{medicine.contraindication}</p>
@@ -66,7 +93,7 @@ const MedicineDetail = () => {
                     
                     <div>
                       <h2 className="text-xl font-semibold mb-3">Efek Samping</h2>
-                      <p className="text-gray-700">{medicine.sideEffects}</p>
+                      <p className="text-gray-700">{medicine.side_effects || medicine.sideEffects}</p>
                     </div>
                   </div>
                   
@@ -77,7 +104,7 @@ const MedicineDetail = () => {
                       <TableBody>
                         <TableRow>
                           <TableCell className="font-medium">Bahan Aktif</TableCell>
-                          <TableCell>{medicine.activeIngredient}</TableCell>
+                          <TableCell>{medicine.active_ingredient || medicine.activeIngredient}</TableCell>
                         </TableRow>
                         
                         {medicine.composition && (
@@ -99,13 +126,13 @@ const MedicineDetail = () => {
                         
                         <TableRow>
                           <TableCell className="font-medium">ID BPOM</TableCell>
-                          <TableCell>{medicine.bpomId}</TableCell>
+                          <TableCell>{medicine.registration_number || medicine.bpomId}</TableCell>
                         </TableRow>
                         
-                        {medicine.bpomRegistrationDate && (
+                        {(medicine.registration_date || medicine.bpomRegistrationDate) && (
                           <TableRow>
                             <TableCell className="font-medium">Tanggal Registrasi</TableCell>
-                            <TableCell>{medicine.bpomRegistrationDate}</TableCell>
+                            <TableCell>{medicine.registration_date || medicine.bpomRegistrationDate}</TableCell>
                           </TableRow>
                         )}
                         
@@ -116,10 +143,10 @@ const MedicineDetail = () => {
                           </TableRow>
                         )}
                         
-                        {medicine.storageCondition && (
+                        {medicine.storage_condition && (
                           <TableRow>
                             <TableCell className="font-medium">Penyimpanan</TableCell>
-                            <TableCell>{medicine.storageCondition}</TableCell>
+                            <TableCell>{medicine.storage_condition}</TableCell>
                           </TableRow>
                         )}
                       </TableBody>

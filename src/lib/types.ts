@@ -1,5 +1,4 @@
 
-
 export type MedicineCategory = 
   // Pusing (Headache) categories
   | 'paracetamol' | 'panadol' | 'bodrex' | 'herbal'
@@ -21,21 +20,27 @@ export type SymptomCategory =
   | 'demam' | 'nyeri' | 'flu_pilek' | 'pencernaan';
 
 export interface Medicine {
-  id: number;
+  id: string;
   name: string;
   category: MedicineCategory;
   symptom: SymptomCategory;
-  description: string;
-  dosage: string;
-  activeIngredient: string;
-  sideEffects: string;
-  bpomId: string;
-  bpomRegistrationDate?: string;
-  manufacturer?: string;
-  composition?: string;
-  indication?: string;
-  contraindication?: string;
-  packaging?: string;
-  storageCondition?: string;
+  description: string | null;
+  dosage: string | null;
+  active_ingredient: string | null;
+  side_effects: string | null;
+  registration_number: string;
+  registration_date?: string | null;
+  manufacturer?: string | null;
+  composition?: string | null;
+  indication?: string | null;
+  contraindication?: string | null;
+  packaging?: string | null;
+  storage_condition?: string | null;
   image?: string;
+  
+  // For backwards compatibility with existing code
+  activeIngredient?: string;
+  sideEffects?: string;
+  bpomId?: string;
+  bpomRegistrationDate?: string;
 }

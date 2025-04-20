@@ -2,6 +2,18 @@
 import { supabase } from "@/integrations/supabase/client";
 import type { Medicine, MedicineCategory, SymptomCategory } from "../types";
 
+// Helper function to map database fields to the Medicine interface
+const mapDbToMedicine = (item: any): Medicine => {
+  return {
+    ...item,
+    // Map the database fields to the interface fields for backward compatibility
+    activeIngredient: item.active_ingredient,
+    sideEffects: item.side_effects,
+    bpomId: item.registration_number,
+    bpomRegistrationDate: item.registration_date
+  };
+};
+
 export const getSymptomMedicines = async (symptom: SymptomCategory): Promise<Medicine[]> => {
   const { data, error } = await supabase
     .from('medications')
@@ -13,7 +25,7 @@ export const getSymptomMedicines = async (symptom: SymptomCategory): Promise<Med
     return [];
   }
   
-  return data || [];
+  return (data || []).map(mapDbToMedicine);
 };
 
 export const getCategoryMedicines = async (category: MedicineCategory): Promise<Medicine[]> => {
@@ -27,7 +39,7 @@ export const getCategoryMedicines = async (category: MedicineCategory): Promise<
     return [];
   }
   
-  return data || [];
+  return (data || []).map(mapDbToMedicine);
 };
 
 export const getMedicineById = async (id: string): Promise<Medicine | null> => {
@@ -42,7 +54,7 @@ export const getMedicineById = async (id: string): Promise<Medicine | null> => {
     return null;
   }
   
-  return data;
+  return data ? mapDbToMedicine(data) : null;
 };
 
 export const searchMedicines = async (query: string): Promise<Medicine[]> => {
@@ -57,5 +69,5 @@ export const searchMedicines = async (query: string): Promise<Medicine[]> => {
     return [];
   }
   
-  return data || [];
+  return (data || []).map(mapDbToMedicine);
 };

@@ -13,26 +13,41 @@ serve(async (req) => {
   }
 
   try {
+    // Define the Supabase client (this will be used later to insert data)
+    const supabaseUrl = Deno.env.get('SUPABASE_URL') || '';
+    const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '';
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
+    // Fetch the BPOM website data
     const response = await fetch('https://cekbpom.pom.go.id/produk-obat');
     if (!response.ok) {
       throw new Error('Failed to fetch BPOM data');
     }
 
     const html = await response.text();
-    // Process HTML and extract medication data
-    // This is a placeholder for the actual scraping logic
+    console.log('Fetched BPOM website html, length:', html.length);
     
-    console.log('Scraping BPOM website...');
-
+    // Here we would implement the actual scraping logic to extract medication data from the HTML
+    // This is a placeholder for the actual implementation
+    console.log('Starting to scrape BPOM website...');
+    
+    // Example of parsing HTML would go here
+    // const parsedMedications = parseBPOMHtml(html);
+    // const insertResult = await supabase.from('medications').insert(parsedMedications);
+    
     return new Response(
-      JSON.stringify({ message: 'Data scraping initiated' }),
+      JSON.stringify({ 
+        message: 'Data scraping initiated',
+        status: 'success', 
+        // details: 'Processed X medications from BPOM website'
+      }),
       { 
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         status: 200 
       }
     );
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Error scraping BPOM data:', error);
     return new Response(
       JSON.stringify({ error: error.message }),
       { 
