@@ -1,4 +1,3 @@
-
 import { Medicine, MedicineCategory, SymptomCategory } from "../../types";
 
 export const skinMedicines: Medicine[] = [
@@ -55,6 +54,41 @@ export const skinMedicines: Medicine[] = [
     sideEffects: "Reaksi alergi pada kulit, iritasi lokal.",
     bpomId: "DTL2023567803",
     bpomRegistrationDate: "2018-11-25"
+  },
+  {
+    id: "104",
+    name: "Miconazole Cream",
+    category: "antifungal" as MedicineCategory,
+    symptom: "kulit" as SymptomCategory,
+    description: "Krim antijamur untuk mengobati infeksi jamur pada kulit seperti panu, kutu air, dan ruam popok.",
+    dosage: "Oleskan 2 kali sehari pada area yang terinfeksi setelah dibersihkan dan dikeringkan.",
+    active_ingredient: "Miconazole Nitrate 2%",
+    side_effects: "Iritasi ringan, gatal, atau kemerahan pada area aplikasi.",
+    registration_number: "DTL2023567804",
+    manufacturer: "Dexa Medica",
+    registration_date: "2021-07-14",
+    storage_condition: "Simpan pada suhu di bawah 30°C",
+    activeIngredient: "Miconazole Nitrate 2%",
+    sideEffects: "Iritasi ringan, gatal, atau kemerahan pada area aplikasi.",
+    bpomId: "DTL2023567804",
+    bpomRegistrationDate: "2021-07-14"
+  },
+  {
+    id: "105",
+    name: "Gentamicin Cream",
+    category: "antibiotic" as MedicineCategory,
+    symptom: "kulit" as SymptomCategory,
+    description: "Krim antibiotik untuk mengobati infeksi bakteri pada kulit.",
+    dosage: "Oleskan tipis-tipis 3-4 kali sehari pada area yang terinfeksi.",
+    active_ingredient: "Gentamicin Sulfate 0.1%",
+    side_effects: "Iritasi lokal, gatal, kemerahan pada area aplikasi.",
+    registration_number: "DTL2023567805",
+    manufacturer: "Kimia Farma",
+    registration_date: "2020-09-22",
+    storage_condition: "Simpan pada suhu ruangan (15-30°C)",
+    activeIngredient: "Gentamicin Sulfate 0.1%",
+    sideEffects: "Iritasi lokal, gatal, kemerahan pada area aplikasi.",
+    bpomId: "DTL2023567805",
+    bpomRegistrationDate: "2020-09-22"
   }
 ];
-

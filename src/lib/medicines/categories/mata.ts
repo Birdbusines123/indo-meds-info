@@ -1,4 +1,3 @@
-
 import { Medicine, MedicineCategory, SymptomCategory } from "../../types";
 
 export const eyeMedicines: Medicine[] = [
@@ -55,6 +54,41 @@ export const eyeMedicines: Medicine[] = [
     sideEffects: "Iritasi mata, kemerahan, gatal, atau penglihatan kabur.",
     bpomId: "DTL2023678903",
     bpomRegistrationDate: "2018-12-10"
+  },
+  {
+    id: "204",
+    name: "Cendo Lyteers",
+    category: "eye_lubricant" as MedicineCategory,
+    symptom: "mata" as SymptomCategory,
+    description: "Tetes mata untuk melembabkan mata kering dan iritasi akibat penggunaan lensa kontak atau paparan layar digital.",
+    dosage: "1-2 tetes pada setiap mata, 3-4 kali sehari atau sesuai kebutuhan.",
+    active_ingredient: "Carboxymethylcellulose Sodium 0.5%",
+    side_effects: "Penglihatan kabur sementara, sensasi terbakar ringan.",
+    registration_number: "DTL2023678904",
+    manufacturer: "Cendo Pharmaceutical",
+    registration_date: "2021-03-15",
+    storage_condition: "Simpan pada suhu 2-25°C. Buang 28 hari setelah dibuka.",
+    activeIngredient: "Carboxymethylcellulose Sodium 0.5%",
+    sideEffects: "Penglihatan kabur sementara, sensasi terbakar ringan.",
+    bpomId: "DTL2023678904",
+    bpomRegistrationDate: "2021-03-15"
+  },
+  {
+    id: "205",
+    name: "Cendo Xitrol",
+    category: "eye_antibiotic" as MedicineCategory,
+    symptom: "mata" as SymptomCategory,
+    description: "Tetes mata antibiotik untuk mengatasi infeksi bakteri pada mata.",
+    dosage: "1-2 tetes setiap 4 jam pada mata yang terinfeksi.",
+    active_ingredient: "Chloramphenicol 0.5%",
+    side_effects: "Iritasi, gatal, sensasi terbakar ringan.",
+    registration_number: "DTL2023678905",
+    manufacturer: "Cendo Pharmaceutical",
+    registration_date: "2020-11-30",
+    storage_condition: "Simpan pada suhu di bawah 25°C",
+    activeIngredient: "Chloramphenicol 0.5%",
+    sideEffects: "Iritasi, gatal, sensasi terbakar ringan.",
+    bpomId: "DTL2023678905",
+    bpomRegistrationDate: "2020-11-30"
   }
 ];
-

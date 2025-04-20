@@ -14,7 +14,7 @@ export type MedicineCategory =
   // Pencernaan (Digestive) categories
   | 'antacid' | 'antidiarrheal' | 'laxative'
   // Kulit (Skin) categories
-  | 'antiseptic' | 'antiitch' | 'burn_treatment'
+  | 'antiseptic' | 'antiitch' | 'burn_treatment' | 'antifungal' | 'antibiotic'
   // Mata (Eye) categories
   | 'eye_drops' | 'eye_lubricant' | 'eye_antibiotic'
   // Vitamin & Suplemen categories
