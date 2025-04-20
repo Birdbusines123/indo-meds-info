@@ -1,8 +1,9 @@
+
 import { Medicine } from "../../types";
 
 export const headacheMedicines: Medicine[] = [
   {
-    id: 1,
+    id: "1",
     name: "Paracetamol 500mg",
     category: "paracetamol",
     symptom: "pusing",
@@ -11,9 +12,12 @@ export const headacheMedicines: Medicine[] = [
     activeIngredient: "Paracetamol 500mg",
     sideEffects: "Umumnya aman jika digunakan sesuai dosis. Efek samping jarang terjadi namun dapat mencakup ruam kulit, reaksi alergi, gangguan fungsi hati pada penggunaan dosis tinggi atau jangka panjang.",
     bpomId: "DBL7809291427A1",
+    active_ingredient: "Paracetamol 500mg",
+    side_effects: "Umumnya aman jika digunakan sesuai dosis. Efek samping jarang terjadi namun dapat mencakup ruam kulit, reaksi alergi, gangguan fungsi hati pada penggunaan dosis tinggi atau jangka panjang.",
+    registration_number: "DBL7809291427A1",
   },
   {
-    id: 2,
+    id: "2",
     name: "Paracetamol Sirup 120mg/5ml",
     category: "paracetamol",
     symptom: "pusing",
@@ -22,11 +26,14 @@ export const headacheMedicines: Medicine[] = [
     activeIngredient: "Paracetamol 120mg per 5ml",
     sideEffects: "Jarang terjadi, namun dapat meliputi reaksi alergi, gangguan fungsi hati jika overdosis.",
     bpomId: "DBL7321569824A1",
+    active_ingredient: "Paracetamol 120mg per 5ml",
+    side_effects: "Jarang terjadi, namun dapat meliputi reaksi alergi, gangguan fungsi hati jika overdosis.",
+    registration_number: "DBL7321569824A1",
   },
   
   // Pusing - Panadol
   {
-    id: 3,
+    id: "3",
     name: "Panadol Extra",
     category: "panadol",
     symptom: "pusing",
@@ -35,9 +42,12 @@ export const headacheMedicines: Medicine[] = [
     activeIngredient: "Paracetamol 500mg, Kafein 65mg",
     sideEffects: "Gelisah, sulit tidur pada individu sensitif terhadap kafein, reaksi alergi (jarang), gangguan fungsi hati jika melebihi dosis.",
     bpomId: "DKL9876543210A1",
+    active_ingredient: "Paracetamol 500mg, Kafein 65mg",
+    side_effects: "Gelisah, sulit tidur pada individu sensitif terhadap kafein, reaksi alergi (jarang), gangguan fungsi hati jika melebihi dosis.",
+    registration_number: "DKL9876543210A1",
   },
   {
-    id: 4,
+    id: "4",
     name: "Panadol Biru",
     category: "panadol",
     symptom: "pusing",
@@ -46,11 +56,14 @@ export const headacheMedicines: Medicine[] = [
     activeIngredient: "Paracetamol 500mg",
     sideEffects: "Umumnya aman jika digunakan sesuai dosis. Efek samping jarang terjadi.",
     bpomId: "DKL9876543211A1",
+    active_ingredient: "Paracetamol 500mg",
+    side_effects: "Umumnya aman jika digunakan sesuai dosis. Efek samping jarang terjadi.",
+    registration_number: "DKL9876543211A1",
   },
   
   // Pusing - Bodrex
   {
-    id: 5,
+    id: "5",
     name: "Bodrex",
     category: "bodrex",
     symptom: "pusing",
@@ -59,10 +72,13 @@ export const headacheMedicines: Medicine[] = [
     activeIngredient: "Paracetamol 600mg, Kafein 50mg",
     sideEffects: "Gangguan tidur, gelisah pada individu sensitif terhadap kafein, reaksi alergi (jarang), gangguan fungsi hati jika overdosis.",
     bpomId: "DBL0123456789A1",
+    active_ingredient: "Paracetamol 600mg, Kafein 50mg",
+    side_effects: "Gangguan tidur, gelisah pada individu sensitif terhadap kafein, reaksi alergi (jarang), gangguan fungsi hati jika overdosis.",
+    registration_number: "DBL0123456789A1",
   },
     // Additional Pusing (Headache) medications
   {
-    id: 9,
+    id: "9",
     name: "Bodrex Migra",
     category: "bodrex",
     symptom: "pusing",
@@ -74,10 +90,13 @@ export const headacheMedicines: Medicine[] = [
     manufacturer: "Tempo Scan Pacific",
     composition: "Paracetamol 650mg, Kafein 50mg",
     indication: "Meredakan sakit kepala migrain dan nyeri kepala sebelah",
-    packaging: "Strip 4 tablet"
+    packaging: "Strip 4 tablet",
+    active_ingredient: "Paracetamol 650mg, Kafein 50mg",
+    side_effects: "Gelisah, sulit tidur, jantung berdebar pada individu sensitif kafein",
+    registration_number: "DBL2024111001",
   },
   {
-    id: 10,
+    id: "10",
     name: "Tolak Angin",
     category: "herbal",
     symptom: "pusing",
@@ -88,6 +107,9 @@ export const headacheMedicines: Medicine[] = [
     bpomId: "TR2024111002",
     manufacturer: "Sido Muncul",
     composition: "Ekstrak herbal terstandarisasi",
-    packaging: "Box 5 sachet"
+    packaging: "Box 5 sachet",
+    active_ingredient: "Ekstrak Amomi Fructus, Zingiberis Aromaticae, Menthae Arvensis",
+    side_effects: "Umumnya aman, bisa menyebabkan mengantuk ringan",
+    registration_number: "TR2024111002",
   },
 ];
